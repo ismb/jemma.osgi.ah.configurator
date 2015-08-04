@@ -5,7 +5,7 @@ Bundle-Name: A@H configurator
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Bundle-SymbolicName: jemma.osgi.ah.configurator
 Bundle-Vendor: Telecom Italia
-Bundle-Version: 1.0.8
+Bundle-Version: 1.0.9
 Created-By: Apache Maven Bundle Plugin
 Export-Package: org.energy_home.jemma.ah.configurator;version="1.0.1"
 Import-Package: org.energy_home.jemma.ah.hac;version="[3.0,4)",org.energ
@@ -33,17 +33,5 @@ Include-Resource: OSGI-INF/configurator.xml=OSGI-INF/configurator.xml,OS
  tes.xml=src/main/resources/codetemplates.xml
 Private-Package: codetemplates.xml,formatter.xml,org.energy_home.jemma.a
  h.internal.configurator,xml.scenarios
-Provide-Capability: osgi.service;effective:=active;objectClass="org.ener
- gy_home.jemma.ah.configurator.IConfigurator",osgi.service;effective:=ac
- tive;objectClass="org.eclipse.osgi.framework.console.CommandProvider"
-Require-Capability: osgi.service;effective:=active;filter:="(objectClass
- =org.energy_home.jemma.ah.configurator.IConfigurator)",osgi.service;eff
- ective:=active;resolution:=optional;filter:="(objectClass=org.osgi.serv
- ice.useradmin.UserAdmin)",osgi.service;effective:=active;filter:="(obje
- ctClass=org.energy_home.jemma.ah.hac.lib.ext.IConnectionAdminService)",
- osgi.service;effective:=active;filter:="(objectClass=org.energy_home.je
- mma.ah.hac.lib.ext.IHacService)",osgi.service;effective:=active;filter:
- ="(objectClass=javax.xml.parsers.DocumentBuilderFactory)"
-Service-Component: OSGI-INF/configurator.xml,OSGI-INF/configurator_comma
- nds.xml
+Service-Component: OSGI-INF/*.xml
 Tool: Bnd-2.3.0.201405100607
